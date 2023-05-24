@@ -57,11 +57,7 @@ curl -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -H "X-Host: 127.0.
 echo "  --> ${1}/${2} -H X-Host: 127.0.0.1"
 curl -s -o /dev/null -iL -w "%{http_code}","%{size_download}" "$1/$2..;/"
 echo "  --> ${1}/${2}..;/"
-curl -s -o /dev/null -iL -w "%{http_code}","%{size_download}" " $1/$2%3D/"
+curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" "$1/$2%3D/"
 echo "  --> ${1}/${2}%3D/"
-#updated
-curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -X TRACE $1/$2
-echo "  --> ${1}/${2} -X TRACE"
 echo "Way back machine:"
 curl -s  https://archive.org/wayback/available?url=$1/$2 | jq -r '.archived_snapshots.closest | {available, url}'
-

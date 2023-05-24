@@ -12,7 +12,7 @@
 - Use 24 known Bypasses for 403 with the help of curl
 
 # Installation
-   * `git clone https://github.com/iamj0ker/bypass-403`
+   * `git clone https://github.com/jackmmartin/bypass-403`
    * `cd bypass-403`
    * `chmod +x bypass-403.sh`
    * `sudo apt install figlet`  - If you are unable to see the logo as in the screenshot

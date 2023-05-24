@@ -15,6 +15,7 @@
    * `git clone https://github.com/jackmmartin/bypass-403`
    * `cd bypass-403`
    * `chmod +x bypass-403.sh`
+   * `chmod +x RateLimit.sh`    -half second rate limit
    * `sudo apt install figlet`  - If you are unable to see the logo as in the screenshot
    * `sudo apt install jq`      - If you don't have jq installed on your machine
    

